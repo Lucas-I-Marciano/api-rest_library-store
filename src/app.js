@@ -1,6 +1,8 @@
 import express from "express";
 import conectDatabase from "./config/dbConnect.js";
 import routes from "./routes/index.js";
+import errorHandler from "./middlewares/errorHandle.js";
+import handler404 from "./middlewares/handler404.js";
 
 const conexao = await conectDatabase();
 
@@ -13,7 +15,10 @@ conexao.once("open", () => {
 });
 
 const app = express();
+
 routes(app);
+app.use(handler404);
+app.use(errorHandler);
 
 export default app;
 // function alteraLivro(id, titulo) {
