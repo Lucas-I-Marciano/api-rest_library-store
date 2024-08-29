@@ -28,7 +28,7 @@ This project involves creating a REST API using MongoDB as the database. The API
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/Lucas-I-Marciano/libraryAPI
+   git clone https://github.com/Lucas-I-Marciano/api-rest_library-store
    cd bookstore-api
    ```
 
